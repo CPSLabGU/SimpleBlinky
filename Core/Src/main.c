@@ -42,6 +42,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+uint32_t count = 1000000;
 
 /* USER CODE END PV */
 
@@ -91,11 +92,14 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  uint32_t i = 0;
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, i < count/8);
+	i = (i + 1) % count;
   }
   /* USER CODE END 3 */
 }
