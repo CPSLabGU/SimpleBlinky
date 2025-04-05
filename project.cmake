@@ -54,6 +54,17 @@ set(${project_name}_STM32F4_SOURCES
 set(${project_name}_STM32F446_SOURCES)
 set(${project_name}_STM32F446ZE_SOURCES)
 
+# STM32F7 subclass specific sources - for nucleo_f756zg
+set(${project_name}_STM32F7_SOURCES
+	${${project_name}_DIR}/Core/Src/stm32f7xx_hal_msp.c
+	${${project_name}_DIR}/Core/Src/stm32f7xx_it.c
+	${${project_name}_DIR}/Core/Src/system_stm32f7xx.c
+)
+
+# Family and model specific sources for F7
+set(${project_name}_STM32F756_SOURCES)
+set(${project_name}_STM32F756ZG_SOURCES)
+
 # Include directories for the project.
 set(${project_name}_INCDIR
 	${${project_name}_DIR}/Core/Inc
@@ -68,6 +79,10 @@ set(${project_name}_STM32F207ZG_INCDIR)
 set(${project_name}_STM32F4_INCDIR)
 set(${project_name}_STM32F446_INCDIR)
 set(${project_name}_STM32F446ZE_INCDIR)
+
+set(${project_name}_STM32F7_INCDIR)
+set(${project_name}_STM32F756_INCDIR)
+set(${project_name}_STM32F756ZG_INCDIR)
 
 # Note: Linker scripts and startup sources are determined automatically based on the board
 # configuration in the respective board.cmake files.
