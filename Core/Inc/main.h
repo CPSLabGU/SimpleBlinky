@@ -27,7 +27,8 @@ extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f2xx_hal.h"
+/* Use the common board wrapper that will include the right HAL */
+#include "hal.h" /* Board wrapper for stm32f2xx_hal.h or stm32f4xx_hal.h */
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
